@@ -27,7 +27,7 @@ def wishMe():
     else:
         speak("good Evening!")
 
-    speak("I'm Dacsor. Please tell me how i help you?")
+    speak("I'm Jarvis. Please tell me how i help you?")
 
 
 def takeCommand():
@@ -55,8 +55,8 @@ def sendemail(to , content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('kuldeepkadu1210@gmail.com', 'password')
-    server.sendmail('kuldeepkadu1210@gmail.com', to, content)
+    server.login('your_email@gmail.com', 'password')
+    server.sendmail('your_email@gmail.com', to, content)
     server.close()
 
 if __name__ == "__main__":
@@ -109,7 +109,7 @@ if __name__ == "__main__":
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "kuldeepkadu@gmail.com"
+                to = "your_email@gmail.com"
                 sendEmail(to, content)
                 speak("Email has been send!")
             except Exception in e:
